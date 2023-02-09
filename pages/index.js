@@ -6,9 +6,6 @@ import utilStyles from "../styles/utils.module.css";
 import { getSortedPostsData } from "../lib/posts";
 
 export async function getStaticProps() {
-  // const res = await fetch("http://127.0.0.1:1122/api/v1/users/");
-  // const allPostsData = res.json();
-  // return allPostsData;
   const allPostsData = getSortedPostsData();
   return {
     props: {
@@ -25,15 +22,15 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>I am a full stack web developer</p>
+        <p>Hello, I am a Full Stack Web Developer</p>
         <p>
-          (This is a sample website - you’ll be building a site like this on{" "}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
+          <a
+            href="https://sardarbilal421.github.io/natours.github.io/"
+            className={utilStyles.blackColor}
+          >
+            My Website
+          </a>
         </p>
-        <h1>
-          Read {allPostsData.title}
-          <Link href="posts/first-post"> This page</Link>
-        </h1>
       </section>
 
       {/* Add this <section> tag below the existing <section> tag */}

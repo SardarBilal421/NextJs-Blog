@@ -6,9 +6,7 @@ import utilStyles from "../../styles/utils.module.css";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 
 export async function getStaticProps({ params }) {
-  // Add the "await" keyword like this:
   const postData = await getPostData(params.id);
-
   return {
     props: {
       postData,
